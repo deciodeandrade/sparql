@@ -1,0 +1,22 @@
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/project/> .
+
+ex:example-project
+    a doap:Project ;
+    doap:name "Example Project" ;
+    doap:description "This is an example project for demonstrating DOAP vocabulary usage." ;
+    doap:homepage <http://example.org/example-project> ;
+    doap:created "2024-01-01"^^xsd:date ;
+    doap:license <http://opensource.org/licenses/MIT> ;
+    doap:programming-language "Ruby" ;
+    doap:developer [
+        a foaf:Person ;
+        foaf:name "John Doe" ;
+        foaf:mbox <mailto:john.doe@example.org>
+    ] ;
+    doap:repository [
+        a doap:GitRepository ;
+        doap:location <https://github.com/example/example-project>
+    ] .
